@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e2247b-26c3-49b4-b390-4456d9273d2f" name="Changes" comment="" />
+    <list default="true" id="85e2247b-26c3-49b4-b390-4456d9273d2f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person-list.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person-list.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,29 +27,45 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2Xn8gGGNLr0pxiL3I3tbjNDF0e5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/andig/Desktop/E-commerce App Branches/Ecommerce Base App/Ecommerce",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andig/Desktop/E-commerce App Branches/Ecommerce Base App&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\andig\\Desktop\\E-commerce App Branches\\Ecommerce Base App\\Ecommerce\\sales-app\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Ecommerce" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Ecommerce" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -47,7 +74,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699253598212</updated>
-      <workItem from="1699253598232" duration="385000" />
+      <workItem from="1699253598232" duration="4537000" />
+      <workItem from="1699286216467" duration="19000" />
+      <workItem from="1699286268021" duration="21000" />
+      <workItem from="1699286301526" duration="14000" />
+      <workItem from="1699286325137" duration="36000" />
     </task>
     <servers />
   </component>
