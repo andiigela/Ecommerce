@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e2247b-26c3-49b4-b390-4456d9273d2f" name="Changes" comment="created rest api project with spring boot" />
+    <list default="true" id="85e2247b-26c3-49b4-b390-4456d9273d2f" name="Changes" comment="created rest api project with spring boot">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +32,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/andig/Desktop/E-commerce App Branches/Ecommerce Base App&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andig/Desktop/E-commerce App Branches/Ecommerce Products Page&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -41,12 +43,6 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Ecommerce" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="Ecommerce" />
       <option name="filePath" />
@@ -69,6 +65,7 @@
       <workItem from="1699286301526" duration="14000" />
       <workItem from="1699286325137" duration="36000" />
       <workItem from="1699286753467" duration="200000" />
+      <workItem from="1699288080137" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="created rest api project with spring boot">
       <option name="closed" value="true" />
