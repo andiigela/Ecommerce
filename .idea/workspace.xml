@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e2247b-26c3-49b4-b390-4456d9273d2f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person-list.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person-list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person-list.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person-list.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sales-app/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sales-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sales-app/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="85e2247b-26c3-49b4-b390-4456d9273d2f" name="Changes" comment="created rest api project with spring boot" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,10 +68,24 @@
       <workItem from="1699286268021" duration="21000" />
       <workItem from="1699286301526" duration="14000" />
       <workItem from="1699286325137" duration="36000" />
+      <workItem from="1699286753467" duration="200000" />
     </task>
+    <task id="LOCAL-00001" summary="created rest api project with spring boot">
+      <option name="closed" value="true" />
+      <created>1699286841012</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699286841012</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="created rest api project with spring boot" />
+    <option name="LAST_COMMIT_MESSAGE" value="created rest api project with spring boot" />
   </component>
 </project>
