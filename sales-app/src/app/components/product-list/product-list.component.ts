@@ -14,9 +14,9 @@ export class ProductListComponent implements OnInit{
   currentCategoryId: number=1;
   constructor(private productService: ProductService,private route: ActivatedRoute) {}
   ngOnInit():void{
-    this.route.paramMap.subscribe(()=>{
-      this.listProducts();
-    })
+    this.route.paramMap.subscribe(()=>
+      this.listProducts()
+    );
   }
   listProducts(){
     const hasCategoryId: boolean = this.route.snapshot.paramMap.has('id');

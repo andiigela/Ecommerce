@@ -1,5 +1,6 @@
 package com.ubt.andi.ecommerceapi.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -16,6 +17,7 @@ public class ProductCategory {
     private Long id;
     @Column(name = "category_name")
     private String name;
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "productCategory")
+    @JsonIgnore
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "productCategory",fetch = FetchType.LAZY)
     private List<Product> products = new ArrayList<>();
 }
