@@ -10,6 +10,11 @@
             <div class="price">{{product.price}}</div>
             <a href="#" class="primary-btn">Add to cart</a>
           </div>
+          <!-- Empty products found message -->
+
+        </div>
+        <div *ngIf="products?.length == 0" class="alert alert-warning col-md-12" role="alert">
+          No products found.
         </div>
       </div>
     </div>
