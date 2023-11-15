@@ -24,6 +24,10 @@ export class ProductService {
     return this.httpClient.get<GetResponse>(searchUrl)
       .pipe(map(response=>response._embedded.products));
   }
+  getProductById(id: string): Observable<Product>{
+    const searchUrl = `${this.baseUrl}/search/findProductBySku?sku=${id}`;
+    return this.httpClient.get<Product>(searchUrl);
+  }
 }
 interface GetResponse {
   _embedded: {

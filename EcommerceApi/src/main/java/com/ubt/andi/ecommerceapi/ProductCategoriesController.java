@@ -1,11 +1,13 @@
 package com.ubt.andi.ecommerceapi;
 
+import com.ubt.andi.ecommerceapi.models.Product;
 import com.ubt.andi.ecommerceapi.models.ProductCategory;
 import com.ubt.andi.ecommerceapi.repositories.ProductCategoryRepository;
 import com.ubt.andi.ecommerceapi.repositories.ProductRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.*;
