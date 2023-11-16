@@ -12,7 +12,13 @@ export class ProductListComponent implements OnInit{
 
   products: Product[] = [];
   currentCategoryId: number=1;
+  previousCategoryId: number=1;
   searchMode: boolean = false;
+
+  thePageNumber: number = 1;
+  thePageSize: number = 2;
+  theTotalElements: number = 0;
+
   constructor(private productService: ProductService,private route: ActivatedRoute) {}
   ngOnInit():void{
     this.route.paramMap.subscribe(()=>
@@ -41,10 +47,19 @@ export class ProductListComponent implements OnInit{
     if(hasCategoryId){
       this.currentCategoryId = +this.route.snapshot.paramMap.get('id')!;
     }
-    this.productService.getProductList(this.currentCategoryId).subscribe(data=>{
-      this.products=data;
-      console.log('Received product data:', JSON.stringify(data));
-    })
+    if(this.previousCategoryId != this.currentCategoryId){
+      this.thePageNumber = 1;
+    }
+    this.previousCategoryId=this.currentCategoryId;
+
+
+    this.productService.getProductList(this.thePageNumber-1,this.thePageSize,this.currentCategoryId)
+      .subscribe(data=>{
+                this.products=data._embedded.products;
+                this.thePageSize = data.page.size;
+                this.thePageNumber=data.page.number+1;
+                this.theTotalElements=data.page.totalElements;
+           })
   }
 
 }
