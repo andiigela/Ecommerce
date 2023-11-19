@@ -16,8 +16,10 @@ export class ProductListComponent implements OnInit{
   searchMode: boolean = false;
 
   thePageNumber: number = 1;
-  thePageSize: number = 2;
+  thePageSize: number = 10;
   theTotalElements: number = 0;
+
+  previousKeyword: string = '';
 
   constructor(private productService: ProductService,private route: ActivatedRoute) {}
   ngOnInit():void{
@@ -35,12 +37,22 @@ export class ProductListComponent implements OnInit{
   }
   handleSearchProducts(){
     const theKeyword: string = this.route.snapshot.paramMap.get('keyword')!;
-    this.productService.searchProducts(theKeyword).subscribe(
-      data => {
-        this.products=data;
-        console.log(data);
-      }
-    );
+    if(this.previousKeyword != theKeyword){
+      this.thePageNumber=1; // gjith duhet me bo 1 ose atje 0 pershkak qe kur tbon search this pagen e par ta kthen, veq nese
+      //ka shum elemente e nuk i nxen ne page 1 ose 0
+    }
+    this.previousKeyword=theKeyword;
+
+    this.productService.searchProducts(this.thePageNumber-1,this.thePageSize,theKeyword)
+      .subscribe(this.processResult());
+  }
+  processResult(){
+    return (data: any)=>{
+      this.products=data._embedded.products;
+      this.thePageSize = data.page.size;
+      this.thePageNumber=data.page.number+1;
+      this.theTotalElements=data.page.totalElements;
+    }
   }
   handleListProducts(){
     const hasCategoryId: boolean = this.route.snapshot.paramMap.has('id');
@@ -54,12 +66,15 @@ export class ProductListComponent implements OnInit{
 
 
     this.productService.getProductList(this.thePageNumber-1,this.thePageSize,this.currentCategoryId)
-      .subscribe(data=>{
-                this.products=data._embedded.products;
-                this.thePageSize = data.page.size;
-                this.thePageNumber=data.page.number+1;
-                this.theTotalElements=data.page.totalElements;
-           })
-  }
+      .subscribe(this.processResult())
+    };
+    updatePage(pageSize: string): void {
+      this.thePageSize = +pageSize;
+      this.thePageNumber = 1;
+      this.listProducts();
+    }
+    addToCart(theProduct: Product){
+      console.log(`Adding to Cart: ${theProduct.name}, ${theProduct.price}`);
+    }
 
 }

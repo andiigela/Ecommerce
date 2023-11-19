@@ -19,10 +19,9 @@ export class ProductService {
   getCategoryList(): Observable<ProductCategory[]>{
     return this.httpClient.get<GetCategoryResponse[]>(this.categoryUrl);
   }
-  searchProducts(theKeyword: string): Observable<Product[]>{
-    const searchUrl = `${this.baseUrl}/search/findByNameContaining?name=${theKeyword}`;
-    return this.httpClient.get<GetResponse>(searchUrl)
-      .pipe(map(response=>response._embedded.products));
+  searchProducts(thePage:number,thePageSize: number,theKeyword: string): Observable<GetResponse>{
+    const searchUrl = `${this.baseUrl}/search/findByNameContaining?name=${theKeyword}&page=${thePage}&size=${thePageSize}`;
+    return this.httpClient.get<GetResponse>(searchUrl);
   }
   getProductById(id: string): Observable<Product>{
     const searchUrl = `${this.baseUrl}/search/findProductBySku?sku=${id}`;
