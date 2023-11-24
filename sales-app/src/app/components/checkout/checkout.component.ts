@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {ShopformService} from "../../services/shopform.service";
+import {start} from "@popperjs/core";
 
 @Component({
   selector: 'app-checkout',
@@ -11,7 +13,9 @@ export class CheckoutComponent implements OnInit{
   checkoutFormGroup: FormGroup = new FormGroup<any>('');
   totalPrice: number = 0;
   totalQuantity: number = 0;
-  constructor(private formBuilder: FormBuilder) {
+  creditCardYears: number[]=[];
+  creditCardMonths: number[]=[];
+  constructor(private formBuilder: FormBuilder,private shopForm: ShopformService) {
   }
 
   ngOnInit(): void {
@@ -44,6 +48,9 @@ export class CheckoutComponent implements OnInit{
           expirationYear: '',
         }),
       });
+    const startMonth: number = new Date().getMonth() + 1;
+    this.shopForm.getCreditCardMonths(startMonth).subscribe(data => this.creditCardMonths = data);
+    this.shopForm.getCreditCardYears().subscribe(data => this.creditCardYears = data);
   }
   onSubmit(){
     console.log('Handling the submit button');
@@ -55,6 +62,17 @@ export class CheckoutComponent implements OnInit{
     }else {
       this.checkoutFormGroup.controls['billingAddress'].reset();
     }
+  }
+  handleMonthsAndYears(){
+    let currentYear: number = new Date().getFullYear(); // 2023
+    let selectedYear: number = Number(this.checkoutFormGroup.controls['creditCard'].value.expirationYear); // 2023
+
+    let startMonth: number = 1;
+    if(currentYear == selectedYear){
+      startMonth = new Date().getMonth() + 1;
+    }
+    this.shopForm.getCreditCardMonths(startMonth).subscribe(data => this.creditCardMonths=data);
+
   }
 
 
