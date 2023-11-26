@@ -11,4 +11,5 @@ import java.util.List;
 public interface StateRepository extends JpaRepository<State, Long> {
     List<State> findByCountryCode(@Param("code") String code);
     List<State> findAllByCountryName(String name);
+    List<State> deleteStateByCountry_Name(String name);
 }
