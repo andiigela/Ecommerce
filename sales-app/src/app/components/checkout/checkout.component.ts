@@ -5,6 +5,7 @@ import {start} from "@popperjs/core";
 import {Country} from "../../common/country";
 import {State} from "../../common/state";
 import {FormValidators} from "../../validators/form-validators";
+import {CartService} from "../../services/cart.service";
 
 @Component({
   selector: 'app-checkout',
@@ -21,10 +22,11 @@ export class CheckoutComponent implements OnInit{
   countries : Country[] = [];
   shippingAddressStates: State[]=[];
   billingAddressStates: State[]=[];
-  constructor(private formBuilder: FormBuilder,private shopForm: ShopformService) {
+  constructor(private formBuilder: FormBuilder,private shopForm: ShopformService,private cartService:CartService) {
   }
 
   ngOnInit(): void {
+    this.reviewCartDetails();
     this.checkoutFormGroup = this.formBuilder.group({
         customer: this.formBuilder.group({
             firstName: new FormControl('',[Validators.required,Validators.minLength(2),FormValidators.notOnlyWhiteSpaces]),
@@ -57,8 +59,8 @@ export class CheckoutComponent implements OnInit{
     const startMonth: number = new Date().getMonth() + 1;
     this.shopForm.getCreditCardMonths(startMonth).subscribe(data => this.creditCardMonths = data);
     this.shopForm.getCreditCardYears().subscribe(data => this.creditCardYears = data);
-
     this.shopForm.retrieveCountries().subscribe(countries => this.countries=countries);
+
   }
   get firstName(){return this.checkoutFormGroup.get('customer.firstName');}
   get lastName(){return this.checkoutFormGroup.get('customer.lastName');}
@@ -126,10 +128,10 @@ export class CheckoutComponent implements OnInit{
         }
       }
     );
-
-
-
-
+  }
+  reviewCartDetails(){
+    this.cartService.totalQuantity.subscribe(data => this.totalQuantity=data);
+    this.cartService.totalPrice.subscribe(data => this.totalPrice=data);
   }
 
 }
