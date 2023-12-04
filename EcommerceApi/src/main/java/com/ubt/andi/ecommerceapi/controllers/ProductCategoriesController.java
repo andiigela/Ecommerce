@@ -1,4 +1,4 @@
-package com.ubt.andi.ecommerceapi;
+package com.ubt.andi.ecommerceapi.controllers;
 
 import com.ubt.andi.ecommerceapi.models.Product;
 import com.ubt.andi.ecommerceapi.models.ProductCategory;
