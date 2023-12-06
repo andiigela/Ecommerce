@@ -6,6 +6,8 @@ import {Country} from "../../common/country";
 import {State} from "../../common/state";
 import {FormValidators} from "../../validators/form-validators";
 import {CartService} from "../../services/cart.service";
+import {CheckoutService} from "../../services/checkout.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-checkout',
@@ -22,7 +24,8 @@ export class CheckoutComponent implements OnInit{
   countries : Country[] = [];
   shippingAddressStates: State[]=[];
   billingAddressStates: State[]=[];
-  constructor(private formBuilder: FormBuilder,private shopForm: ShopformService,private cartService:CartService) {
+  constructor(private formBuilder: FormBuilder,private shopForm: ShopformService,
+              private cartService:CartService,private checkoutService: CheckoutService,private router: Router) {
   }
 
   ngOnInit(): void {
@@ -86,11 +89,14 @@ export class CheckoutComponent implements OnInit{
     console.log('Handling the submit button');
     if(this.checkoutFormGroup.invalid){
       this.checkoutFormGroup.markAllAsTouched();
+      return;
     }
 
-    console.log(this.checkoutFormGroup.get('shippingAddress')?.value.zipCode);
-    console.log(`Shipping Address Country is: ${this.checkoutFormGroup.get('shippingAddress')?.value.country.name}`);
-    console.log(`Billing Address Country is: ${this.checkoutFormGroup.get('billingAddress')?.value.country.name}`);
+
+
+    // console.log(this.checkoutFormGroup.get('shippingAddress')?.value.zipCode);
+    // console.log(`Shipping Address Country is: ${this.checkoutFormGroup.get('shippingAddress')?.value.country.name}`);
+    // console.log(`Billing Address Country is: ${this.checkoutFormGroup.get('billingAddress')?.value.country.name}`);
   }
   copyShippingAddressToBillingAddress(event: any){
     if(event.target.checked){
