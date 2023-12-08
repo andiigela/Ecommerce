@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e2247b-26c3-49b4-b390-4456d9273d2f" name="Changes" comment="created rest api project with spring boot" />
+    <list default="true" id="85e2247b-26c3-49b4-b390-4456d9273d2f" name="Changes" comment="feature/Products-Page: created relationship between Product-Category, entity repositories and inserted raw data">
+      <change beforePath="$PROJECT_DIR$/EcommerceApi/src/main/java/com/ubt/andi/ecommerceapi/controllers/CheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/EcommerceApi/src/main/java/com/ubt/andi/ecommerceapi/controllers/CheckoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcommerceApi/src/main/java/com/ubt/andi/ecommerceapi/models/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/EcommerceApi/src/main/java/com/ubt/andi/ecommerceapi/models/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/src/app/common/address.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/common/address.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/src/app/common/customer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/common/customer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/src/app/common/order.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/common/order.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/src/app/common/purchase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/common/purchase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/src/app/components/checkout/checkout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/components/checkout/checkout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/src/app/services/checkout.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/services/checkout.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/tsconfig.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,21 +35,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/andig/Desktop/E-commerce App Branches/Ecommerce Base App&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\andig\\Desktop\\E-commerce App Branches\\Ecommerce Base App\\Ecommerce\\sales-app\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/andig/Desktop/E-commerce App Branches/Ecommerce Products Page",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\andig\\Desktop\\E-commerce App Branches\\Ecommerce Base App\\Ecommerce\\sales-app\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Ecommerce" />
@@ -69,6 +79,11 @@
       <workItem from="1699286301526" duration="14000" />
       <workItem from="1699286325137" duration="36000" />
       <workItem from="1699286753467" duration="200000" />
+      <workItem from="1699288080137" duration="16000" />
+      <workItem from="1699293132731" duration="784000" />
+      <workItem from="1699340097231" duration="34000" />
+      <workItem from="1699438578186" duration="53000" />
+      <workItem from="1702037126374" duration="18000" />
     </task>
     <task id="LOCAL-00001" summary="created rest api project with spring boot">
       <option name="closed" value="true" />
@@ -78,7 +93,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699286841012</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feature/Products-Page: created relationship between Product-Category, entity repositories and inserted raw data">
+      <option name="closed" value="true" />
+      <created>1699293307530</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699293307530</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,6 +109,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created rest api project with spring boot" />
-    <option name="LAST_COMMIT_MESSAGE" value="created rest api project with spring boot" />
+    <MESSAGE value="feature/Products-Page: created relationship between Product-Category, entity repositories and inserted raw data" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature/Products-Page: created relationship between Product-Category, entity repositories and inserted raw data" />
   </component>
 </project>
