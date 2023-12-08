@@ -5,25 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e2247b-26c3-49b4-b390-4456d9273d2f" name="Changes" comment="feature/Products-Page: created relationship between Product-Category, entity repositories and inserted raw data">
-      <change afterPath="$PROJECT_DIR$/EcommerceApi/src/main/java/com/ubt/andi/ecommerceapi/config/MyDataRestConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sales-app/src/app/common/product.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sales-app/src/app/common/product.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sales-app/src/app/components/product-list/product-list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sales-app/src/app/components/product-list/product-list.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sales-app/src/app/components/product-list/product-list.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sales-app/src/app/services/product.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sales-app/src/app/services/product.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcommerceApi/src/main/java/com/ubt/andi/ecommerceapi/repositories/ProductCategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/EcommerceApi/src/main/java/com/ubt/andi/ecommerceapi/repositories/ProductCategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EcommerceApi/src/main/java/com/ubt/andi/ecommerceapi/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/EcommerceApi/src/main/java/com/ubt/andi/ecommerceapi/repositories/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sales-app/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sales-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/components/product-list/product-list.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person-list.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person-list.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person-list.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sales-app/src/app/sales-person-list/sales-person.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcommerceApi/src/main/java/com/ubt/andi/ecommerceapi/controllers/CheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/EcommerceApi/src/main/java/com/ubt/andi/ecommerceapi/controllers/CheckoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EcommerceApi/src/main/java/com/ubt/andi/ecommerceapi/models/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/EcommerceApi/src/main/java/com/ubt/andi/ecommerceapi/models/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/src/app/common/address.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/common/address.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/src/app/common/customer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/common/customer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/src/app/common/order.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/common/order.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/src/app/common/purchase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/common/purchase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/src/app/components/checkout/checkout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/components/checkout/checkout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/src/app/services/checkout.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/src/app/services/checkout.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sales-app/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/sales-app/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/andig/Desktop/E-commerce App Branches/Ecommerce Products Page/Ecommerce/sales-app",
+    "last_opened_file_path": "C:/Users/andig/Desktop/E-commerce App Branches/Ecommerce Products Page",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -93,6 +83,7 @@
       <workItem from="1699293132731" duration="784000" />
       <workItem from="1699340097231" duration="34000" />
       <workItem from="1699438578186" duration="53000" />
+      <workItem from="1702037126374" duration="18000" />
     </task>
     <task id="LOCAL-00001" summary="created rest api project with spring boot">
       <option name="closed" value="true" />
