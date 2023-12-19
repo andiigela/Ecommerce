@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
 
     this.authService.registerUser(user).subscribe({
       next: response => {
-        console.log(`Your registration is completed: ${response.Name}`);
+        console.log(`Your registration is completed: ${response.fullName}`);
       },
       error: err => {
         console.error('Error occurred:', err); // Log the full error object

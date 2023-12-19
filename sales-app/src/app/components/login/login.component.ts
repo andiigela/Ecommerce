@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     let password:string = this.loginFormGroup.controls['login'].get('password')?.value;
       this.authService.loginUser(username,password).subscribe({
           next: response => {
-              console.log(`Successfully Logged in: ${response.username}` );
+              console.log(`Successfully Logged in: ${response.accessToken}`);
           },
           error: err => {
               console.error('Error occurred:', err); // Log the full error object
@@ -32,5 +32,4 @@ export class LoginComponent implements OnInit {
           }
       });
   }
-
 }
