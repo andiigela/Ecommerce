@@ -8,10 +8,13 @@ import {User} from "../common/user";
 })
 export class AuthenticationService {
   private registerUrl: string = 'http://localhost:8080/register';
+  private loginUrl: string = 'http://localhost:8080/login';
   constructor(private httpClient: HttpClient) {
-
   }
   registerUser(user: User):Observable<any>{
     return this.httpClient.post<User>(this.registerUrl,user);
+  }
+  loginUser(username: string, password: string):Observable<any>{
+    return this.httpClient.post<any>(this.loginUrl,{username,password});
   }
 }

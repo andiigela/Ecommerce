@@ -15,4 +15,9 @@ public class UserServiceImpl implements UserService{
         userRepository.save(user);
         return user;
     }
+    @Override
+    public AppUser findUserByUsername(String username) {
+        if(username == null || username.trim().isEmpty()) return null;
+        return userRepository.findByUsername(username);
+    }
 }
