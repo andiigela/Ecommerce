@@ -1,0 +1,16 @@
+<div class="container" style="margin-top: 10%;margin-bottom: 18%">
+  <form [formGroup]="loginFormGroup" (ngSubmit)="loginButton()">
+    <div formGroupName="login">
+      <h2>Login</h2>
+      <div formControlName="username" class="form-group">
+        <label for="exampleInput2">Username</label>
+        <input type="email" formControlName="username" class="form-control" id="exampleInput2" aria-describedby="emailHelp" placeholder="Enter username">
+      </div>
+      <div formControlName="password" class="form-group">
+        <label for="exampleInput3">Password</label>
+        <input type="password" formControlName="password" class="form-control" id="exampleInput3" placeholder="Password">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-top: 15px">Submit</button>
+  </form>
+</div>
