@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthenticationService} from "../../services/authentication.service";
 import {Route, Router} from "@angular/router";
+import {CartService} from "../../services/cart.service";
 
 @Component({
   selector: 'app-login-status',
@@ -19,6 +20,7 @@ export class LoginStatusComponent implements OnInit {
   }
   logout(){
     this.authService.logout();
+    this.router.navigate(['/']);
   }
 
 

@@ -34,6 +34,10 @@ public class CustomerServiceImpl implements CustomerService {
         order.setShippingAddress(purchase.getShippingAddress());
 
         Customer customer = purchase.getCustomer();
+        Customer customerDb = customerRepository.findByEmail(customer.getEmail());
+        if(customerDb != null ){
+            customer = customerDb;
+        }
         customer.add(order);
 
         customerRepository.save(customer);
