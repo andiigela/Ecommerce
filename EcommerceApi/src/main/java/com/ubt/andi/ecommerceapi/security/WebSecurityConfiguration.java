@@ -25,6 +25,7 @@ public class WebSecurityConfiguration {
                 .requestMatchers(new AntPathRequestMatcher("/register")).permitAll()
                 .requestMatchers(new AntPathRequestMatcher("/login")).permitAll()
                 .requestMatchers(new AntPathRequestMatcher("/test")).permitAll()
+                .requestMatchers(new AntPathRequestMatcher("/orders/**")).permitAll()
                 .and().csrf().disable();
         return http.build();
     }

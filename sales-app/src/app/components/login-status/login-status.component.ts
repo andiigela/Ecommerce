@@ -10,6 +10,7 @@ import {CartService} from "../../services/cart.service";
 })
 export class LoginStatusComponent implements OnInit {
   isAuthenticated: boolean=false;
+  storage: Storage = sessionStorage;
   constructor(private authService: AuthenticationService,private router: Router) {
   }
 

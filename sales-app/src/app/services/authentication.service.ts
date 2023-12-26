@@ -21,6 +21,7 @@ export class AuthenticationService {
     return this.httpClient.post<any>(this.loginUrl,{username,password})
       .pipe(tap(response => {
         localStorage.setItem('accessToken',response.accessToken);
+        sessionStorage.setItem('userEmail', username);
         this.isAuthenticated.next(true);
       }));
   }
