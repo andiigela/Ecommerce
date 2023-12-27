@@ -37,6 +37,7 @@ export class AuthenticationService {
   logout(): void {
     // Implement logout logic if needed, e.g., clearing localStorage
     localStorage.removeItem('accessToken');
+    sessionStorage.removeItem('userEmail');
     this.isAuthenticated.next(false);
   }
 }

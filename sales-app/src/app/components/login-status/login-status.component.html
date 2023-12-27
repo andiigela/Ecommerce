@@ -2,6 +2,7 @@
     <label>Hello user</label>
     <button class="btn btn-info" (click)="logout()">Log out</button>
     <button routerLink="/members" class="btn btn-info">Member</button>
+    <button routerLink="/order-history" class="btn btn-info">Orders</button>
 </div>
 <div *ngIf="isAuthenticated == false">
     <button routerLink="/login">Log in</button>

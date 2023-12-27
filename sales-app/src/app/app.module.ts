@@ -28,6 +28,7 @@ function sendToLoginPage(injector: Injector){
 }
 
 const routes : Routes = [
+  {path: 'order-history',component:OrderHistoryComponent,canActivate: [CustomAuthGuardService]},
   {path: 'members',component:MembersPageComponent,canActivate: [CustomAuthGuardService]},
   {path: 'login',component:LoginComponent},
   {path: 'register',component:RegisterComponent},

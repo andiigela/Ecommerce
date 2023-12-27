@@ -25,7 +25,11 @@ public class WebSecurityConfiguration {
                 .requestMatchers(new AntPathRequestMatcher("/register")).permitAll()
                 .requestMatchers(new AntPathRequestMatcher("/login")).permitAll()
                 .requestMatchers(new AntPathRequestMatcher("/test")).permitAll()
+                .requestMatchers(new AntPathRequestMatcher("/products")).permitAll()
+                .requestMatchers(new AntPathRequestMatcher("/products/search/findByProductCategoryId/**")).permitAll()
                 .requestMatchers(new AntPathRequestMatcher("/orders/**")).permitAll()
+                .requestMatchers(new AntPathRequestMatcher("/products/**")).permitAll()
+                .requestMatchers(new AntPathRequestMatcher("/countries/**")).permitAll()
                 .and().csrf().disable();
         return http.build();
     }
