@@ -11,10 +11,11 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins(allowedOrigins)
-                .allowedMethods("GET", "POST", "PUT", "DELETE")
+                .allowedOrigins("http://localhost:4200") // Add your Angular application's URL
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
+                .exposedHeaders("Authorization") // Expose the Authorization header
                 .allowCredentials(true)
-                .exposedHeaders("Authorization"); // Add any additional exposed headers if needed
+                .maxAge(3600);
     }
 }

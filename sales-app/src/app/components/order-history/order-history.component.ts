@@ -10,6 +10,7 @@ import {OrderHistoryService} from "../../services/order-history.service";
 export class OrderHistoryComponent implements OnInit{
   orderHistoryList: OrderHistory[] = [];
   storage: Storage = sessionStorage;
+
   constructor(private orderHistoryService: OrderHistoryService) {
   }
   ngOnInit(): void {
