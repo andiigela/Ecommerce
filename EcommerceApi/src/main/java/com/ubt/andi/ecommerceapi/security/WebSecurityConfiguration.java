@@ -36,6 +36,7 @@ public class WebSecurityConfiguration {
                 .requestMatchers(new AntPathRequestMatcher("/test")).permitAll()
                 .requestMatchers(new AntPathRequestMatcher("/states/**")).permitAll()
                 .requestMatchers(new AntPathRequestMatcher("/checkout/purchase")).permitAll()
+                .requestMatchers(new AntPathRequestMatcher("/productCategories/**")).permitAll()
                 .requestMatchers(new AntPathRequestMatcher("/products")).permitAll()
                 .requestMatchers(new AntPathRequestMatcher("/products/search/findByProductCategoryId/**")).permitAll()
                 .requestMatchers(new AntPathRequestMatcher("/countries/**")).permitAll()
@@ -49,7 +50,7 @@ public class WebSecurityConfiguration {
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
-//        http.csrf().disable()
+//        http.csrf().dissable()
 //                .authorizeRequests()
 //                .requestMatchers(new AntPathRequestMatcher("/register")).permitAll()
 //                .requestMatchers(new AntPathRequestMatcher("/login")).permitAll()
