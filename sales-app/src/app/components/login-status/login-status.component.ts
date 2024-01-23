@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthenticationService} from "../../services/authentication.service";
 import {Route, Router} from "@angular/router";
+import {CartService} from "../../services/cart.service";
 
 @Component({
   selector: 'app-login-status',
@@ -9,6 +10,7 @@ import {Route, Router} from "@angular/router";
 })
 export class LoginStatusComponent implements OnInit {
   isAuthenticated: boolean=false;
+  storage: Storage = sessionStorage;
   constructor(private authService: AuthenticationService,private router: Router) {
   }
 
@@ -19,6 +21,7 @@ export class LoginStatusComponent implements OnInit {
   }
   logout(){
     this.authService.logout();
+    this.router.navigate(['/']);
   }
 
 

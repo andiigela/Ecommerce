@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   loginButton(){
     let username:string = this.loginFormGroup.controls['login'].get('username')?.value;
     let password:string = this.loginFormGroup.controls['login'].get('password')?.value;
-      this.authService.loginUser(username,password).subscribe({
+      this.authService.loginUser(username,password,'').subscribe({
           next: response => {
               console.log(`Successfully Logged in: ${response.accessToken}`);
           },

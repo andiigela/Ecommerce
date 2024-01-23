@@ -28,17 +28,21 @@ export class CheckoutComponent implements OnInit{
   countries : Country[] = [];
   shippingAddressStates: State[]=[];
   billingAddressStates: State[]=[];
+  storage: Storage = sessionStorage;
+  localStorage: Storage = localStorage;
   constructor(private formBuilder: FormBuilder,private shopForm: ShopformService,
               private cartService:CartService,private checkoutService: CheckoutService,private router: Router) {
   }
 
   ngOnInit(): void {
     this.reviewCartDetails();
+    const theEmail = this.storage.getItem('userEmail')!;
+
     this.checkoutFormGroup = this.formBuilder.group({
         customer: this.formBuilder.group({
             firstName: new FormControl('',[Validators.required,Validators.minLength(2),FormValidators.notOnlyWhiteSpaces]),
             lastName: new FormControl('',[Validators.required,Validators.minLength(2),FormValidators.notOnlyWhiteSpaces]),
-            email: new FormControl('',[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"),FormValidators.notOnlyWhiteSpaces]),
+            email: new FormControl(theEmail,[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"),FormValidators.notOnlyWhiteSpaces]),
         }),
         shippingAddress: this.formBuilder.group({
             street: new FormControl('',[Validators.required,Validators.minLength(2),FormValidators.notOnlyWhiteSpaces]),
@@ -135,18 +139,13 @@ export class CheckoutComponent implements OnInit{
     this.checkoutService.placeOrder(purchase).subscribe({
       next: response => {
         alert(`Your order has been received.\nOrder tracking number: ${response.orderTrackingNumber}`)
+        this.localStorage.removeItem('cartItems');
         this.resetCart();
       },
       error:err => {
         alert(`There was an error: ${err.message}`)
       }
     });
-
-
-
-    // console.log(this.checkoutFormGroup.get('shippingAddress')?.value.zipCode);
-    // console.log(`Shipping Address Country is: ${this.checkoutFormGroup.get('shippingAddress')?.value.country.name}`);
-    // console.log(`Billing Address Country is: ${this.checkoutFormGroup.get('billingAddress')?.value.country.name}`);
   }
   resetCart(){
     //reset cart data

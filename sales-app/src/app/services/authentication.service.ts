@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {BehaviorSubject, Observable, Subject, tap} from "rxjs";
 import {User} from "../common/user";
+import {CartService} from "./cart.service";
 
 @Injectable({
   providedIn: 'root'
@@ -14,12 +15,15 @@ export class AuthenticationService {
     this.checkIsAuthenticated();
   }
   registerUser(user: User):Observable<any>{
-    return this.httpClient.post<User>(this.registerUrl,user);
+    return this.httpClient.post<any>(this.registerUrl,user);
   }
-  loginUser(username: string, password: string):Observable<any>{
-    return this.httpClient.post<any>(this.loginUrl,{username,password})
+  loginUser(username: string, password: string, token: string):Observable<any>{
+    token = localStorage.getItem('accessToken')!;
+
+    return this.httpClient.post<any>(this.loginUrl,{username,password,token})
       .pipe(tap(response => {
-        localStorage.setItem('accessToken',response.accessToken);
+        sessionStorage.setItem('userEmail', response.userName);
+        localStorage.setItem('accessToken',response.accessToken)
         this.isAuthenticated.next(true);
       }));
   }
@@ -35,6 +39,7 @@ export class AuthenticationService {
   logout(): void {
     // Implement logout logic if needed, e.g., clearing localStorage
     localStorage.removeItem('accessToken');
+    sessionStorage.removeItem('userEmail');
     this.isAuthenticated.next(false);
   }
 }
